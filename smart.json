@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "bootstrap-3": {},
+    "iron-router": {},
+    "jquery-rateit": {},
+    "bootstrap-datepicker2": {},
+    "moment": {}
+  }
+}

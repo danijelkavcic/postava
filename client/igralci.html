@@ -1,0 +1,40 @@
+<template name="igralci">
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+				<h1>Nogometaši <small>Seznam</small></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				{{> sidemenu }}
+			</div>
+			<div class="col-md-10">
+				<div class="table-responsive">
+					<table class="table table-condensed">
+						{{#each igralci}}
+							{{> igralec-detail}}
+						{{/each}}
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="igralec-detail">
+	<tr>
+		<td class="col-md-4">
+			{{ime}}
+		</td>
+		<td  class="col-md-2">
+			<div class="star" data-id="{{_id}}" data-rateit-value="{{rating}}"></div>
+			<span id="starinfo{{_id}}}" class="float-left starinfo"></span>
+		</td>
+		<td class="col-md-6"></td>
+	</tr>
+</template>
+
+<template name="igralec">
+	Edit
+</template>
