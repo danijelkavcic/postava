@@ -10,26 +10,32 @@
 				{{> sidemenu }}
 			</div>
 			<div class="col-md-10">
-				<div class="table-responsive">
-					<table class="table table-condensed tekma" id="{{tekma_id}}">
-						{{#each igralci}}
+				<div class="row">
+					<div class="table-responsive">
+						<table class="table table-condensed tekma" id="{{id}}">
+							{{#each igralci}}
 							{{> igralectekma}}
-						{{/each}}
-					</table>
+							{{/each}}
+						</table>
+					</div>
 				</div>
+				<div class="row">
+					<button id="naredipostavo" class="btn btn-primary" data-tekma-id="{{id}}">Naredi postavo</button>
+				</div>		
 			</div>
+
 		</div>
 	</div>
 </template>
 
 <template name="igralectekma">
-	<tr>
+	<tr class="{{#if jeEkipa 0}}active{{/if}}{{#if jeEkipa 1}}warning{{/if}}">
 		<td>{{datum}}</td>
 		<td>{{ime}}</td>
 		<td>
 			<div class="btn-group">
-				<button data-id="{{igralec_id}}" data-tekmaid="{{tekma_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
-				<button data-id="{{igralec_id}}" data-tekmaid="{{tekma_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
+				<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
+				<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
 			</div>
 		</td>
 	</tr>

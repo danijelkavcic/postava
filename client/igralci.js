@@ -1,3 +1,5 @@
+var tooltipvalues = ['se trudi', 'zadane žogo', 'nosilec igre', 'terminator'];
+
 Template.igralci.igralci = function () {
   return Igralci.find({}, {sort: { ime: 1 }});
 };
@@ -15,11 +17,11 @@ Template.igralci.rendered = function () {
   $(".star").bind('rated', function (event, value) {
     console.log(this.id);
     var id = $(event.target).data("id");
-    var igralec = Igralci.findOne({_id:id});
-    if (igralec != null && typeof(igralec) != "undefined") {
-      igralec.rating = value;
-      Igralci.update({_id:id}, igralec);
-    }
+    // var igralec = Igralci.findOne({_id:id});
+    // if (igralec != null && typeof(igralec) != "undefined") {
+    //   igralec.rating = value;
+      Igralci.update({_id:id}, {$set: {rating: value}});
+    // }
   });
 };
 
