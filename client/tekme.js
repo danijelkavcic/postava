@@ -11,7 +11,7 @@ Template.tekme.events({
   'click #naredipostavo': function(ev) {
     var beli = 0;
     var crni = 0;
-    for (var i = 3; i >= 0; i--)    {
+    for (var i = 4; i > 0; i--)    {
       var nePridejo = IgralciNaTekmi.find({rating:i, pride:false}).fetch();
       nastaviEkipo(nePridejo, null);
       var igralci = IgralciNaTekmi.find({rating:i, pride:true}).fetch();

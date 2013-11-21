@@ -4,6 +4,7 @@
     "iron-router": {},
     "jquery-rateit": {},
     "bootstrap-datepicker2": {},
-    "moment": {}
+    "moment": {},
+    "font-awesome-4": {}
   }
 }

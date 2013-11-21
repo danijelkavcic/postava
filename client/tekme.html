@@ -12,11 +12,15 @@
 			<div class="col-md-10">
 				<div class="row">
 					<div class="table-responsive">
-						<table class="table table-condensed tekma" id="{{id}}">
-							{{#each igralci}}
-							{{> igralectekma}}
-							{{/each}}
-						</table>
+						<!--table class="table table-condensed tekma" id="{{id}}"-->
+						<div class="col-md-4">
+							<ul class="list-group">
+								{{#each igralci}}
+								{{> igralectekma}}
+								{{/each}}
+							</ul>
+						</div>
+						<!--/table-->
 					</div>
 				</div>
 				<div class="row">
@@ -29,15 +33,30 @@
 </template>
 
 <template name="igralectekma">
-	<tr class="{{#if jeEkipa 0}}active{{/if}}{{#if jeEkipa 1}}warning{{/if}}">
-		<td>{{datum}}</td>
-		<td>{{ime}}</td>
-		<td>
-			<div class="btn-group">
-				<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
-				<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
+
+	<li class="list-group-item {{#if jeEkipa 0}}active{{/if}}">
+		<div class="row">
+			<div class="col-md-6">
+				<span class="list-group-item-heading">{{ime}}</span>
 			</div>
-		</td>
-	</tr>
-	{{datum}} {{ime}}
-</template>
+			<div class="col-md-6">
+				<p class="list-group-item-text">
+					<div class="btn-group pull-right">
+						<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
+						<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
+					</div>
+				</p>
+			</div>
+		</div>
+	</li>
+
+		<!--tr class="{{#if jeEkipa 0}}active{{/if}}{{#if jeEkipa 1}}warning{{/if}}">
+			<td>{{ime}}</td>
+			<td>
+				<div class="btn-group">
+					<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
+					<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
+				</div>
+			</td>
+		</tr-->
+	</template>
