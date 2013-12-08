@@ -33,11 +33,6 @@ Template.tekme.events({
   }    
 });
 
-var ekipa = {
-  BELI: 0,
-  CRNI: 1,
-};
-
 Template.igralectekma.events({
   'click .pride': function(ev) {
     var id = $(ev.target).data('id');
@@ -53,7 +48,7 @@ Template.igralectekma.aliPride = function (pride) {
   return this.pride === pride;
 };
 
-Template.igralectekma.jeEkipa = function (ekipa) {
+Template.ekipa.jeEkipa = function (ekipa) {
   return this.ekipa === ekipa;
 };
 

@@ -3,3 +3,14 @@
 	font-weight: bold;
 	width: 100px;
 }
+
+a.list-group-item.crni, a.list-group-item.crni:focus {
+    background-color: #000000;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+a.list-group-item.crni:hover {
+    background-color: #444444;
+}

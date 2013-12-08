@@ -13,10 +13,11 @@
 				<div class="table-responsive">
 					<table class="table table-condensed">
 						{{#each igralci}}
-							{{> igralec-detail}}
+						{{> igralec-detail}}
 						{{/each}}
 					</table>
 				</div>
+				{{> igralec}}
 			</div>
 		</div>
 	</div>
@@ -36,5 +37,8 @@
 </template>
 
 <template name="igralec">
-	Edit
+	<!-- <form class="form-inline" role="form"> -->
+		<input type="text" id="nov-igralec" class="form-control" placeholder="Vnesi novega igralca"/>
+		<!-- <button type="submit" id="tt" class="btn btn-default pull-right">Dodaj</button> -->
+	<!-- </form> -->
 </template>

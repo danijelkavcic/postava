@@ -12,15 +12,28 @@
 			<div class="col-md-10">
 				<div class="row">
 					<div class="table-responsive">
-						<!--table class="table table-condensed tekma" id="{{id}}"-->
-						<div class="col-md-4">
+						<div class="col-md-5">
 							<ul class="list-group">
 								{{#each igralci}}
 								{{> igralectekma}}
 								{{/each}}
 							</ul>
 						</div>
-						<!--/table-->
+						<div class="col-md-1"></div>
+						<div class="col-md-3">
+							<div class="list-group">
+								{{#each crni}}
+								{{> ekipa}}
+								{{/each}}
+							</div>
+						</div>						
+						<div class="col-md-3">
+							<div class="list-group">
+								{{#each beli}}
+								{{> ekipa}}
+								{{/each}}
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -33,13 +46,13 @@
 </template>
 
 <template name="igralectekma">
-
-	<li class="list-group-item {{#if jeEkipa 0}}active{{/if}}">
+	<li class="list-group-item">
 		<div class="row">
 			<div class="col-md-6">
 				<span class="list-group-item-heading">{{ime}}</span>
 			</div>
 			<div class="col-md-6">
+				<span class="fa pull-left">{{{stars rating}}}</span>
 				<p class="list-group-item-text">
 					<div class="btn-group pull-right">
 						<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
@@ -49,14 +62,8 @@
 			</div>
 		</div>
 	</li>
+</template>
 
-		<!--tr class="{{#if jeEkipa 0}}active{{/if}}{{#if jeEkipa 1}}warning{{/if}}">
-			<td>{{ime}}</td>
-			<td>
-				<div class="btn-group">
-					<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
-					<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
-				</div>
-			</td>
-		</tr-->
-	</template>
+<template name="ekipa">
+	<a href="#" class="list-group-item {{#if jeEkipa 1}}crni{{/if}}">{{ime}}</a>
+</template>

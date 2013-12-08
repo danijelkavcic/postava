@@ -9,12 +9,15 @@ Router.map(function() {
         return null;
 
       Session.set("tekma_id", tekma._id);
-      // var igralci = IgralciNaTekmi.find({tekma_id: this.params._id}).fetch();
       var igralci = IgralciNaTekmi.find().fetch();
+      var beli = IgralciNaTekmi.find({ekipa:ekipa.BELI}).fetch();
+      var crni = IgralciNaTekmi.find({ekipa:ekipa.CRNI}).fetch();
       var tekma = {
         id: tekma._id,
         datum: tekma.datum,
-        igralci: igralci
+        igralci: igralci,
+        beli:beli,
+        crni:crni
       };
       return tekma;
     }
