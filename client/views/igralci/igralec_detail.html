@@ -1,0 +1,22 @@
+<template name="igralecDetail">
+	<tr>
+		<td class="col-md-4">
+			{{ime}}
+		</td>
+		<td  class="col-md-3">
+			<div class="star" data-id="{{_id}}" data-rateit-value="{{rating}}"></div>
+			<span id="starinfo{{_id}}}" class="float-left starinfo"></span>&nbsp;
+			<i class="glyphicon glyphicon-remove-sign remove rokica" data-id="{{_id}}"></i>
+		</td>
+		<td class="col-md-5"></td>
+	</tr>
+<!-- 	<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>{{ime}}</h3>
+        <p><div class="star" data-id="{{_id}}" data-rateit-value="{{rating}}"></div></p>
+        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+      </div>
+    </div>
+  </div> -->
+</template>

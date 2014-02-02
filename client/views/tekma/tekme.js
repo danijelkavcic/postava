@@ -33,25 +33,6 @@ Template.tekme.events({
   }    
 });
 
-Template.igralectekma.events({
-  'click .pride': function(ev) {
-    var id = $(ev.target).data('id');
-    IgralciNaTekmi.update({_id: id}, {$set: {pride: true}});
-  },
-  'click .manjka': function(ev) {
-    var id = $(ev.target).data('id');
-    IgralciNaTekmi.update({_id: id}, {$set: {pride: false}});
-  }
-});
-
-Template.igralectekma.aliPride = function (pride) {
-  return this.pride === pride;
-};
-
-Template.ekipa.jeEkipa = function (ekipa) {
-  return this.ekipa === ekipa;
-};
-
 function nastaviEkipo(array, ekipa)
 {
   for (var j = 0; j < array.length; j++)

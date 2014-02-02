@@ -1,0 +1,24 @@
+<template name="igralci">
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+				<h1>Nogometaši <small>Seznam</small></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				{{> sidemenu }}
+			</div>
+			<div class="col-md-10">
+				{{> igralecNov}}
+				<div class="table-responsive">
+					<table class="table table-condensed">
+						{{#each igralci}}
+						{{> igralecDetail}}
+						{{/each}}
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

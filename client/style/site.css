@@ -14,3 +14,16 @@ a.list-group-item.crni, a.list-group-item.crni:focus {
 a.list-group-item.crni:hover {
     background-color: #444444;
 }
+
+.rokica {
+	cursor: pointer; 
+	cursor: hand;
+}
+
+/*html { 
+  background: url('/images/gol.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/

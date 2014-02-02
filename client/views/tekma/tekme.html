@@ -15,7 +15,7 @@
 						<div class="col-md-5">
 							<ul class="list-group">
 								{{#each igralci}}
-								{{> igralectekma}}
+								{{> tekmaIgralec}}
 								{{/each}}
 							</ul>
 						</div>
@@ -23,14 +23,14 @@
 						<div class="col-md-3">
 							<div class="list-group">
 								{{#each crni}}
-								{{> ekipa}}
+								{{> tekmaEkipa}}
 								{{/each}}
 							</div>
 						</div>						
 						<div class="col-md-3">
 							<div class="list-group">
 								{{#each beli}}
-								{{> ekipa}}
+								{{> tekmaEkipa}}
 								{{/each}}
 							</div>
 						</div>
@@ -43,27 +43,4 @@
 
 		</div>
 	</div>
-</template>
-
-<template name="igralectekma">
-	<li class="list-group-item">
-		<div class="row">
-			<div class="col-md-6">
-				<span class="list-group-item-heading">{{ime}}</span>
-			</div>
-			<div class="col-md-6">
-				<span class="fa pull-left">{{{stars rating}}}</span>
-				<p class="list-group-item-text">
-					<div class="btn-group pull-right">
-						<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
-						<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
-					</div>
-				</p>
-			</div>
-		</div>
-	</li>
-</template>
-
-<template name="ekipa">
-	<a href="#" class="list-group-item {{#if jeEkipa 1}}crni{{/if}}">{{ime}}</a>
 </template>

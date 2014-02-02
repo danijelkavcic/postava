@@ -26,8 +26,3 @@ Template.sidemenu.tekme = function () {
 Template.sidemenu.izbranaTekma = function () {
   return this._id === Session.get("tekma_id");;
 };
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-  });
-}

@@ -1,0 +1,18 @@
+<template name="tekmaIgralec">
+	<li class="list-group-item">
+		<div class="row">
+			<div class="col-md-6">
+				<span class="list-group-item-heading">{{ime}}</span>
+			</div>
+			<div class="col-md-6">
+				<span class="fa pull-left">{{{stars rating}}}</span>
+				<p class="list-group-item-text">
+					<div class="btn-group pull-right">
+						<button data-id="{{_id}}" class="btn btn-default btn-xs pride {{#if aliPride true}}active{{/if}}">Pride</button>
+						<button data-id="{{_id}}" class="btn btn-default btn-xs manjka {{#if aliPride false}}active{{/if}}">Manjka</button>
+					</div>
+				</p>
+			</div>
+		</div>
+	</li>
+</template>
